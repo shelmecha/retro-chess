@@ -1,0 +1,17 @@
+{
+  "name": "retro-chess",
+  "productName": "RetroChess",
+  "version": "1.0.0",
+  "description": "A tiny always-on-top desktop chess board with pixel-art pieces, playing against Stockfish 18.",
+  "author": "9 Days Wonder",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "node build.js"
+  },
+  "devDependencies": {
+    "@electron/packager": "^20.0.4",
+    "electron": "^28.0.0"
+  }
+}

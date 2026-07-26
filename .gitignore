@@ -1,0 +1,18 @@
+node_modules/
+
+# Packaged output from `npm run dist`
+dist/
+
+# Stale hand-made distribution folders, superseded by dist/
+RetroChess-Share/
+RetroChess-win32-x64/
+COMPLETE RetroChess-Share/
+
+# The Stockfish engine is a ~114 MB GPLv3 binary and is downloaded separately.
+# See the README for where to get it.
+*.exe
+
+# Windows / editor cruft
+desktop.ini
+Thumbs.db
+.DS_Store
