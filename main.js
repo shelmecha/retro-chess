@@ -17,6 +17,8 @@ function createWindow () {
     frame: false,
     alwaysOnTop: true,
     transparent: false,
+    // Packaged builds take their icon from the exe; this is what `npm start` shows.
+    icon: path.join(__dirname, 'icon.ico'),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false

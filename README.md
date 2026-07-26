@@ -80,7 +80,13 @@ Buttons across the top: `RESET`, `UNDO`, `SOUND`, theme, `MENU`, `EXIT`.
 | `main.js` | Electron main process; owns the window and the Stockfish subprocess |
 | `chess.html` | The entire renderer — CSS, chess engine, sprites, and UI |
 | `build.js` | Packaging script behind `npm run dist` |
+| `tools/make-icon.js` | Regenerates `icon.ico` from the knight sprite in `chess.html` |
 | `stockfish/` | Where the engine binary goes; holds its GPLv3 licence text |
+
+The pieces are 16×16 four-tone sprites defined in `chess.html` and drawn to a canvas at
+load time — there are no image files. Tone order is outline, fill, shadow, highlight, and
+each piece is a different height so they stay apart by silhouette alone. Change a sprite
+and rerun `node tools/make-icon.js` to keep the app icon in sync.
 
 `chess.html` also carries a small built-in fallback engine used when the page is opened
 in a plain browser instead of Electron. Under Electron it never runs.

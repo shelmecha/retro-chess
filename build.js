@@ -6,6 +6,12 @@ const { packager } = require('@electron/packager');
 
 const root = __dirname;
 const enginePath = path.join(root, 'stockfish', 'stockfish-windows-x86-64.exe');
+const iconPath = path.join(root, 'icon.ico');
+
+if (!fs.existsSync(iconPath)) {
+  console.error('Missing icon.ico. Generate it with: node tools/make-icon.js');
+  process.exit(1);
+}
 
 // The engine is not committed to the repo (it is a 114 MB GPLv3 binary), so a fresh
 // clone will not have it. Fail loudly here rather than shipping a build that cannot play.
@@ -38,6 +44,9 @@ packager({
   overwrite: true,
   prune: true,
   ignore,
+  // Puts the knight on RetroChess.exe itself, in Explorer and in the taskbar.
+  // Regenerate with `node tools/make-icon.js` after changing the sprite art.
+  icon: iconPath,
   // The engine must stay a real file on disk -- spawn() cannot run a binary from inside
   // an asar archive. main.js redirects to the unpacked copy.
   asar: { unpack: '**/stockfish/**' }
