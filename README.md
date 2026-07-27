@@ -93,7 +93,8 @@ in a plain browser instead of Electron. Under Electron it never runs.
 
 ## Licence
 
-The Retro Chess application code is MIT licensed — see `LICENSE`.
+The Retro Chess application code is MIT licensed — see `LICENSE`. Third-party components
+and their terms are listed in `NOTICE`.
 
 Stockfish is a separate program, licensed under the **GNU General Public License v3**
 (`stockfish/Copying.txt`). It is not bundled in this repository. Retro Chess talks to it

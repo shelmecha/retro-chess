@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This application uses the Stockfish chess engine, which is a separate program
-licensed under the GNU General Public License version 3. Stockfish is not
-included in this repository; see README.md for how to obtain it, and
-stockfish/Copying.txt for its licence text.

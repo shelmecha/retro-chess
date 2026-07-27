@@ -5,6 +5,21 @@
   "description": "A tiny always-on-top desktop chess board with pixel-art pieces, playing against Stockfish 18.",
   "author": "9 Days Wonder",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shelmecha/retro-chess.git"
+  },
+  "homepage": "https://github.com/shelmecha/retro-chess#readme",
+  "bugs": {
+    "url": "https://github.com/shelmecha/retro-chess/issues"
+  },
+  "keywords": [
+    "chess",
+    "stockfish",
+    "electron",
+    "pixel-art",
+    "desktop"
+  ],
   "main": "main.js",
   "scripts": {
     "start": "electron .",

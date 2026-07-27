@@ -1,0 +1,31 @@
+Retro Chess
+Copyright (c) 2026 9 Days Wonder
+
+This product is licensed under the MIT License; see LICENSE.
+
+--------------------------------------------------------------------------------
+Third-party components
+--------------------------------------------------------------------------------
+
+Stockfish
+    Copyright (c) the Stockfish developers (see AUTHORS file)
+    Licensed under the GNU General Public License version 3.
+    Licence text: stockfish/Copying.txt
+    Upstream: https://github.com/official-stockfish/Stockfish
+
+    Stockfish is a separate program and is NOT included in this repository. It
+    must be downloaded separately; see README.md. Retro Chess launches it as a
+    child process and communicates over the standard UCI protocol, across a
+    process boundary.
+
+    If you distribute a packaged build that bundles the Stockfish binary, you
+    are redistributing Stockfish and must comply with the GPLv3 — including
+    shipping its licence text and offering its corresponding source.
+
+Electron
+    Copyright (c) Electron contributors; Copyright (c) 2013-2020 GitHub Inc.
+    Licensed under the MIT License.
+    Upstream: https://github.com/electron/electron
+
+    Electron is a build-time dependency and is redistributed inside packaged
+    builds produced by `npm run dist`.
