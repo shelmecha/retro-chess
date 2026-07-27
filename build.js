@@ -67,6 +67,19 @@ packager({
       console.error('The build would start but never make a move.');
       process.exit(1);
     }
+    // Distributing this folder redistributes Stockfish, so the GPLv3 text has to travel
+    // with it. It does -- Copying.txt rides along in the unpacked engine folder -- but
+    // buried three levels down next to Electron's own LICENSE, which is a different
+    // licence for a different thing. Surface our terms at the top level so whoever
+    // unzips this can actually find them without opening the asar.
+    for (const [src, dest] of [['LICENSE', 'LICENSE.RetroChess.txt'], ['NOTICE', 'NOTICE.txt']]) {
+      const from = path.join(root, src);
+      if (!fs.existsSync(from)) {
+        console.error('Missing ' + src + ', which must ship with the build.');
+        process.exit(1);
+      }
+      fs.copyFileSync(from, path.join(outPath, dest));
+    }
     console.log('Built ' + exe);
   })
   .catch(error => {
