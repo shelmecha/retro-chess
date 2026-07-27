@@ -6,6 +6,17 @@ screen and you play a game.
 
 Built by 9 Days Wonder.
 
+## Download
+
+**[Download RetroChess-win32-x64.zip](https://github.com/shelmecha/retro-chess/releases/latest)**
+— Windows x64, 175 MB, engine included. Unzip it and run `RetroChess.exe` **from inside the
+unzipped folder**; the executable needs its siblings and will not run on its own.
+
+The build is unsigned, so SmartScreen shows *"Windows protected your PC"* — click **More
+info → Run anyway**. There is no installer; delete the folder to uninstall.
+
+Everything below is for running or building from source instead.
+
 ## What's in it
 
 - Full legal move generation (castling, en passant, auto-queen promotion) written from
